@@ -1,0 +1,13 @@
+<div class="course-section">
+    <h2>Course</h2>
+    <select [(ngModel)]="selectedCourse">
+      <option *ngFor="let course of courses" [value]="course">{{ course }}</option>
+    </select>
+    <button (click)="showAddCourse()">Add New Course</button>
+    <div *ngIf="addingCourse">
+      <input [(ngModel)]="newCourse" placeholder="Enter course name">
+      <button (click)="addCourse()">✔</button>
+      <button (click)="cancelAddCourse()">❌</button>
+    </div>
+  </div>
+  
